@@ -1,0 +1,122 @@
+/* Tone down AOS defaults for a subtler, premium feel */
+[data-aos] {
+  transition-property: transform, opacity !important;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(24px);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.94);
+}
+
+/* Mobile nav menu */
+.nav-links {
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: var(--sp-3);
+    right: var(--sp-3);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--sp-3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-cta .btn-secondary.is-open {
+    display: inline-flex;
+  }
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Portfolio hover play affordance */
+.portfolio-item {
+  cursor: pointer;
+}
+
+.portfolio-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-gradient);
+  box-shadow: var(--shadow-accent);
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%) scale(0.8);
+  width: 16px;
+  height: 16px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  background: #fff;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.portfolio-item:hover::before,
+.portfolio-item:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.portfolio-item:hover::after {
+  transform: translate(-45%, -50%) scale(1);
+}
+
+.portfolio-item.is-playing::before,
+.portfolio-item.is-playing::after {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+  }
+}

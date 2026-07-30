@@ -1,0 +1,70 @@
+:root {
+  /* Colors */
+  --color-bg: #fafafc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3f2fb;
+  --color-border: #e7e6f0;
+  --color-text: #17162b;
+  --color-text-muted: #62617a;
+  --color-text-faint: #9694ab;
+
+  --color-accent: #6c5ce7;
+  --color-accent-dark: #5646c9;
+  --color-accent-soft: #efecff;
+  --color-accent-2: #22d1ee;
+  --color-accent-3: #ff6bcb;
+  --color-accent-gradient: linear-gradient(120deg, #6c5ce7 0%, #4f8afc 55%, #22d1ee 100%);
+  --color-accent-gradient-vivid: linear-gradient(120deg, #6c5ce7 0%, #a259ff 45%, #ff6bcb 100%);
+
+  --color-star: #ffb400;
+  --color-success: #2fb380;
+
+  /* Glass / dark surfaces */
+  --color-ink: #0f0e1c;
+  --color-ink-soft: #1a1830;
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  /* Typography */
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", var(--font-body);
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
+  --fs-4xl: 4.25rem;
+
+  /* Spacing (8px scale) */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 3rem;
+  --sp-6: 4rem;
+  --sp-7: 6rem;
+  --sp-8: 8rem;
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(23, 22, 43, 0.05);
+  --shadow-md: 0 12px 32px rgba(23, 22, 43, 0.08);
+  --shadow-lg: 0 24px 56px rgba(23, 22, 43, 0.12);
+  --shadow-accent: 0 16px 40px rgba(108, 92, 231, 0.25);
+  --shadow-glow: 0 0 0 1px rgba(108, 92, 231, 0.15), 0 24px 48px rgba(108, 92, 231, 0.18);
+
+  /* Layout */
+  --container-max: 1200px;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
