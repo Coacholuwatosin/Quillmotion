@@ -3,7 +3,7 @@ import random
 
 from flask import Flask, jsonify, request, send_from_directory
 
-from data import PORTFOLIO, REVIEWS, STATS
+from _data import PORTFOLIO, REVIEWS, STATS
 
 app = Flask(__name__)
 
@@ -45,7 +45,7 @@ def get_portfolio():
 # Port 8000, not 5000: on Mac, System Settings > AirPlay Receiver often
 # already occupies port 5000, which silently breaks this exact setup.
 # Only these specific folders are exposed, never the api/ folder itself,
-# so data.py and index.py source stay off-limits either way.
+# so _data.py and index.py source stay off-limits either way.
 
 
 @app.get("/")

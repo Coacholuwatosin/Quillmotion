@@ -17,7 +17,7 @@ assets/
   videos/            real sample clips (hero loop + portfolio grid)
   images/            logo/images if you add any
 api/
-  data.py            EDIT THIS to update stats, reviews, ratings, results, portfolio
+  _data.py           EDIT THIS to update stats, reviews, ratings, results, portfolio
   index.py           Flask app serving the JSON API, plus local static-file preview
 requirements.txt      Python deps (Flask)
 vercel.json            Vercel routing config
@@ -40,7 +40,7 @@ underlying data or content.
 ## Updating content
 
 - **Stats / reviews / ratings / results / portfolio videos**: edit
-  `api/data.py` (`STATS`, `REVIEWS`, `PORTFOLIO`), then commit and push.
+  `api/_data.py` (`STATS`, `REVIEWS`, `PORTFOLIO`), then commit and push.
   Vercel redeploys automatically. No database, no admin login. Portfolio
   order is reshuffled by the backend on every page load, so the "first 6"
   shown isn't always the same clips.
@@ -48,7 +48,7 @@ underlying data or content.
   `index.html` (all copy is easy to find and swap).
 - **Video samples**: live in `assets/videos/`. `hero-loop.mp4` plays in the
   hero section. To add a new portfolio clip, drop the file into that folder
-  and add a matching entry to the `PORTFOLIO` list in `api/data.py`, no HTML
+  and add a matching entry to the `PORTFOLIO` list in `api/_data.py`, no HTML
   edit needed.
 - **Contact routing**: open `js/contact.js` and confirm `OWNER_EMAIL` and
   `OWNER_WHATSAPP` (country code + number, digits only) match your real
@@ -111,4 +111,4 @@ and need updating once you have a real domain:
 2. Go to [vercel.com](https://vercel.com), import the repo, keep the default
    settings (no build command needed) and deploy.
 3. Every future push to the main branch redeploys automatically, including
-   whenever you edit `api/data.py` with new reviews or stats.
+   whenever you edit `api/_data.py` with new reviews or stats.
