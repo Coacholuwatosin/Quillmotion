@@ -1,7 +1,7 @@
 /**
- * Stats and reviews are never hardcoded here, they're fetched from the
- * backend (api/index.py -> api/data.py) at runtime so the raw data never
- * ships inside index.html/js source.
+ * Stats, reviews, and portfolio are never hardcoded here, they're fetched
+ * from the backend (api/*.js -> api/_data.js) at runtime so the raw data
+ * never ships inside index.html/js source.
  */
 const API_BASE = "/api";
 
