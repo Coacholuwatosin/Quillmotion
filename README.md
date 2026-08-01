@@ -83,16 +83,15 @@ If you don't have Node.js installed, get it from
 ## Before you go live (SEO checklist)
 
 The `<head>` in `index.html` already has title, meta description, Open
-Graph/Twitter tags, a JSON-LD business schema, a favicon, `robots.txt`, and
-`sitemap.xml`. Three things use a placeholder domain (`quillmotion.com`)
-and need updating once you have a real domain:
+Graph/Twitter tags, a JSON-LD business schema, a favicon, an `og-preview.jpg`
+social share image, `robots.txt`, and `sitemap.xml`. One thing uses a
+placeholder domain (`quillmotion.com`) and needs updating once you have a
+real domain:
 
 1. Replace `https://quillmotion.com/` in `index.html` (`canonical`, `og:url`,
    `twitter` tags, and the JSON-LD `url`) and in `robots.txt`/`sitemap.xml`
    with your real domain.
-2. Add a real `assets/images/og-preview.jpg` (1200x630px) so links shared on
-   social media and messaging apps show a preview image instead of nothing.
-3. Double check the JSON-LD email in `index.html` matches whatever's current
+2. Double check the JSON-LD email in `index.html` matches whatever's current
    in `js/contact.js`.
 
 ## Deploying
