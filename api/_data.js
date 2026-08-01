@@ -11,7 +11,7 @@
  */
 
 const STATS = [
-  { label: "Videos delivered", value: 500, suffix: "+" },
+  { label: "Videos delivered", value: 87, suffix: "" },
   { label: "Average rating", value: 4.9, suffix: "/5" },
   { label: "Brands & creators served", value: 60, suffix: "+" },
   { label: "Avg. turnaround", value: 3, suffix: " days" },
