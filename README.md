@@ -1,4 +1,4 @@
-# Quillmotion: AI Video Portfolio Site
+# QuillMotion: AI Video Portfolio Site
 
 Single-page portfolio for an AI video creation service (brands, products, individuals).
 Plain HTML/CSS/JS frontend with AOS scroll animations, backed by three tiny

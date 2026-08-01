@@ -27,6 +27,7 @@ const PORTFOLIO = [
   { src: "leevs-vitamin-face-wash.mp4", caption: "Leevs Vitamin Face Wash", category: "Product" },
   { src: "medicube-collagen-capsule-cream.mp4", caption: "Medicube Collagen Capsule Cream", category: "Product" },
   { src: "neolife-treatment.mp4", caption: "NeoLife Treatment", category: "Product" },
+  { src: "neol-skincare-product.mp4", caption: "NeoL Skincare", category: "Product" },
   { src: "ogee-skin-enhancer.mp4", caption: "Ogee Skin Enhancer", category: "Product" },
   { src: "ritual-face-serum.mp4", caption: "Ritual Face Serum", category: "Product" },
 ];
@@ -38,6 +39,7 @@ const REVIEWS = [
     rating: 5,
     quote: "The product launch video looked like it came from an agency ten times our budget. Turnaround was insanely fast.",
     result: "3.2x more add-to-carts in launch week",
+    avatar: "avatar-amara-chen.jpg",
   },
   {
     name: "Daniel Osei",
@@ -45,6 +47,7 @@ const REVIEWS = [
     rating: 5,
     quote: "I've tried a few AI video services and this is the first one that actually understood my brand voice from a single brief.",
     result: "Avg. watch time up 41%",
+    avatar: "avatar-daniel-osei.jpg",
   },
   {
     name: "Priya Nathan",
@@ -52,6 +55,7 @@ const REVIEWS = [
     rating: 5,
     quote: "We needed 12 product videos in a week for a seasonal campaign. Delivered on time, on brand, no revisions needed.",
     result: "12 videos delivered in 6 days",
+    avatar: "avatar-priya-nathan.jpg",
   },
   {
     name: "Marcus Webb",
@@ -59,6 +63,7 @@ const REVIEWS = [
     rating: 4,
     quote: "Great value for a solo artist who can't afford a full production team. The revision process was smooth and easy.",
     result: "Music video used across 3 platforms",
+    avatar: "avatar-marcus-webb.jpg",
   },
   {
     name: "Sofia Reyes",
@@ -66,6 +71,7 @@ const REVIEWS = [
     rating: 5,
     quote: "Premium quality without the premium agency price tag. Our brand video became our top-performing ad creative.",
     result: "Lowered cost-per-view by 58%",
+    avatar: "avatar-sofia-reyes.jpg",
   },
   {
     name: "Hana Whitfield",
@@ -73,6 +79,7 @@ const REVIEWS = [
     rating: 5,
     quote: "Our product video felt like it was shot in a real studio with real models. Customers keep asking where we filmed it.",
     result: "Product page conversion up 2.4x",
+    avatar: "avatar-hana-whitfield.jpg",
   },
   {
     name: "Julian Marsh",
@@ -80,6 +87,7 @@ const REVIEWS = [
     rating: 5,
     quote: "We send a brief on Monday and have a finished video by Thursday. That speed alone changed how often we can launch new ads.",
     result: "4 new ad creatives shipped per month",
+    avatar: "avatar-julian-marsh.jpg",
   },
   {
     name: "Renee Castillo",
@@ -87,6 +95,7 @@ const REVIEWS = [
     rating: 5,
     quote: "I run my page solo and could never afford a videographer. Now every post looks like it has a full production team behind it.",
     result: "Follower growth tripled in 90 days",
+    avatar: "avatar-renee-castillo.jpg",
   },
   {
     name: "Tobias Lindgren",
@@ -94,6 +103,7 @@ const REVIEWS = [
     rating: 4,
     quote: "Every revision request was handled quickly and without pushback. It's the easiest vendor relationship we have.",
     result: "Return rate dropped after clearer demo videos",
+    avatar: "avatar-tobias-lindgren.jpg",
   },
 ];
 

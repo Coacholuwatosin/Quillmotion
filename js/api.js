@@ -110,7 +110,10 @@ function renderReviews(grid, reviews) {
         <p class="testimonial-quote">"${escapeHTML(review.quote)}"</p>
         ${review.result ? `<div class="testimonial-result">↑ ${escapeHTML(review.result)}</div>` : ""}
         <div class="testimonial-person">
-          <div class="testimonial-avatar">${initials(review.name)}</div>
+          <div class="testimonial-avatar">
+            ${initials(review.name)}
+            ${review.avatar ? `<img src="assets/images/${encodeURIComponent(review.avatar)}" alt="${escapeHTML(review.name)}" onerror="this.remove()" />` : ""}
+          </div>
           <div>
             <div class="testimonial-name">${escapeHTML(review.name)}</div>
             <div class="testimonial-role">${escapeHTML(review.role)}</div>

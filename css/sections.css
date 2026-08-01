@@ -437,6 +437,7 @@
 }
 
 .testimonial-avatar {
+  position: relative;
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -449,7 +450,18 @@
   font-weight: 700;
   font-size: var(--fs-sm);
   flex-shrink: 0;
+  overflow: hidden;
   box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+/* Sits on top of the initials; onerror on the <img> removes it if the
+   photo isn't there yet, so the initials show through as a fallback. */
+.testimonial-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-name {
