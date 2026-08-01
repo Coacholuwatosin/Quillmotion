@@ -198,15 +198,28 @@ function observePortfolioVideo(video, item) {
       if (activePortfolioVideo && activePortfolioVideo !== video) {
         pausePortfolioVideo(activePortfolioVideo);
       }
+      item.classList.remove("has-error");
+      item.classList.add("is-playing", "is-loading");
       video.muted = false;
-      video.play();
-      item.classList.add("is-playing");
+      video.play().catch(() => {
+        item.classList.remove("is-loading", "is-playing");
+        item.classList.add("has-error");
+      });
       activePortfolioVideo = video;
     } else {
       pausePortfolioVideo(video);
     }
   });
 
+  // "playing" only fires once buffering finishes and playback actually
+  // starts, unlike "play" which fires immediately on intent, before that
+  // wait, so this is what actually clears the loading spinner.
+  video.addEventListener("playing", () => item.classList.remove("is-loading"));
+  video.addEventListener("waiting", () => item.classList.add("is-loading"));
+  video.addEventListener("error", () => {
+    item.classList.remove("is-loading", "is-playing");
+    item.classList.add("has-error");
+  });
   video.addEventListener("ended", () => pausePortfolioVideo(video));
 }
 
@@ -214,7 +227,7 @@ function pausePortfolioVideo(video) {
   video.pause();
   video.muted = true;
   const item = video.closest(".portfolio-item");
-  if (item) item.classList.remove("is-playing");
+  if (item) item.classList.remove("is-playing", "is-loading");
   if (activePortfolioVideo === video) activePortfolioVideo = null;
 }
 

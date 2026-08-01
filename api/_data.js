@@ -35,7 +35,7 @@ const PORTFOLIO = [
 const REVIEWS = [
   {
     name: "Amara Chen",
-    role: "Founder, Lumio Skincare",
+    role: "Founder",
     rating: 5,
     quote: "The product launch video looked like it came from an agency ten times our budget. Turnaround was insanely fast.",
     result: "3.2x more add-to-carts in launch week",
@@ -43,7 +43,7 @@ const REVIEWS = [
   },
   {
     name: "Daniel Osei",
-    role: "Content Creator, 220K followers",
+    role: "Content Creator",
     rating: 5,
     quote: "I've tried a few AI video services and this is the first one that actually understood my brand voice from a single brief.",
     result: "Avg. watch time up 41%",
@@ -51,7 +51,7 @@ const REVIEWS = [
   },
   {
     name: "Priya Nathan",
-    role: "Marketing Lead, Fen & Co.",
+    role: "Marketing Lead",
     rating: 5,
     quote: "We needed 12 product videos in a week for a seasonal campaign. Delivered on time, on brand, no revisions needed.",
     result: "12 videos delivered in 6 days",
@@ -67,7 +67,7 @@ const REVIEWS = [
   },
   {
     name: "Sofia Reyes",
-    role: "Founder, Reyes Studio",
+    role: "Founder",
     rating: 5,
     quote: "Premium quality without the premium agency price tag. Our brand video became our top-performing ad creative.",
     result: "Lowered cost-per-view by 58%",
@@ -75,7 +75,7 @@ const REVIEWS = [
   },
   {
     name: "Hana Whitfield",
-    role: "Founder, Ogee Skincare",
+    role: "Founder",
     rating: 5,
     quote: "Our product video felt like it was shot in a real studio with real models. Customers keep asking where we filmed it.",
     result: "Product page conversion up 2.4x",
@@ -83,7 +83,7 @@ const REVIEWS = [
   },
   {
     name: "Julian Marsh",
-    role: "Growth Lead, Blore Beauty",
+    role: "Growth Lead",
     rating: 5,
     quote: "We send a brief on Monday and have a finished video by Thursday. That speed alone changed how often we can launch new ads.",
     result: "4 new ad creatives shipped per month",
@@ -99,7 +99,7 @@ const REVIEWS = [
   },
   {
     name: "Tobias Lindgren",
-    role: "E-commerce Manager, Elementre",
+    role: "E-commerce Manager",
     rating: 4,
     quote: "Every revision request was handled quickly and without pushback. It's the easiest vendor relationship we have.",
     result: "Return rate dropped after clearer demo videos",

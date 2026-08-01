@@ -104,6 +104,22 @@
   font-size: var(--fs-sm);
 }
 
+.format-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: var(--sp-5);
+}
+
+.format-tags-label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-right: 0.3rem;
+}
+
 /* ===== Portfolio ===== */
 .portfolio-grid {
   display: grid;
