@@ -12,7 +12,7 @@ css/                 variables, base, components, sections, animations
 js/
   main.js            AOS init, navbar, mobile menu, accordion, scroll progress
   api.js             fetches /api/stats, /api/reviews, /api/portfolio, renders them into the DOM
-  contact.js         builds mailto:/WhatsApp links from the contact form
+  contact.js         builds a mailto: link from the contact form
 assets/
   videos/            real sample clips (hero loop + portfolio grid)
   images/            logo/images if you add any
@@ -55,10 +55,11 @@ data or content.
   hero section. To add a new portfolio clip, drop the file into that folder
   and add a matching entry to the `PORTFOLIO` array in `api/_data.js`, no
   HTML edit needed.
-- **Contact routing**: open `js/contact.js` and confirm `OWNER_EMAIL` and
-  `OWNER_WHATSAPP` (country code + number, digits only) match your real
-  contact details. `OWNER_EMAIL` is currently set to a Gmail address as a
-  stand-in until a custom domain email is ready.
+- **Contact routing**: open `js/contact.js` and confirm `OWNER_EMAIL` matches
+  your real address. It's currently set to a Gmail address as a stand-in
+  until a custom domain email is ready. WhatsApp sending was removed until
+  a real number is ready, see the comment at the top of `js/contact.js` for
+  how to add it back.
 
 ## Running locally
 

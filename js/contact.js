@@ -1,17 +1,20 @@
 /**
  * No backend involved in sending messages. The form builds a prefilled
- * mailto: / WhatsApp (wa.me) link from the visitor's input, then lets them
- * pick which app sends it. Fill in your real email/phone below.
+ * mailto: link from the visitor's input, then lets them send it from their
+ * own email app. Fill in your real email below.
+ *
+ * WhatsApp sending was removed for now (no number set up yet). To bring it
+ * back: add a WHATSAPP_NUMBER constant, restore the "Send via WhatsApp"
+ * button in index.html's #sendOptions, and set its href to
+ * `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(bodyText)}`.
  */
 const OWNER_EMAIL = "quillmotion@gmail.com";
-const OWNER_WHATSAPP = "10000000000"; // country code + number, digits only, no +/spaces
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const sendOptions = document.getElementById("sendOptions");
   const successMsg = document.getElementById("contactSuccess");
   const emailBtn = document.getElementById("sendEmailBtn");
-  const whatsappBtn = document.getElementById("sendWhatsappBtn");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -39,10 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `mailto:${OWNER_EMAIL}` +
       `?subject=${encodeURIComponent("New project inquiry: " + fields.projectType)}` +
       `&body=${encodeURIComponent(bodyText)}`;
-
-    whatsappBtn.href = `https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(bodyText)}`;
-    whatsappBtn.target = "_blank";
-    whatsappBtn.rel = "noopener";
 
     sendOptions.classList.add("is-visible");
     successMsg.classList.add("is-visible");

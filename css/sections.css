@@ -615,7 +615,7 @@
 
 .contact-send-options.is-visible {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .contact-success {

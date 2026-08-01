@@ -68,16 +68,6 @@
   width: 100%;
 }
 
-.btn-whatsapp {
-  background: #25d366;
-  color: #fff;
-}
-
-.btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.3);
-}
-
 .btn-email {
   background: var(--color-text);
   color: #fff;
