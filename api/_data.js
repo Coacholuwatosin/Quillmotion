@@ -39,7 +39,7 @@ const REVIEWS = [
     rating: 5,
     quote: "The product launch video looked like it came from an agency ten times our budget. Turnaround was insanely fast.",
     result: "3.2x more add-to-carts in launch week",
-    avatar: "avatar-amara-chen.jpg",
+    avatar: "avatar-amara-chen.png",
   },
   {
     name: "Daniel Osei",
@@ -47,7 +47,7 @@ const REVIEWS = [
     rating: 5,
     quote: "I've tried a few AI video services and this is the first one that actually understood my brand voice from a single brief.",
     result: "Avg. watch time up 41%",
-    avatar: "avatar-daniel-osei.jpg",
+    avatar: "avatar-daniel-osei.png",
   },
   {
     name: "Priya Nathan",
@@ -55,7 +55,7 @@ const REVIEWS = [
     rating: 5,
     quote: "We needed 12 product videos in a week for a seasonal campaign. Delivered on time, on brand, no revisions needed.",
     result: "12 videos delivered in 6 days",
-    avatar: "avatar-priya-nathan.jpg",
+    avatar: "avatar-priya-nathan.png",
   },
   {
     name: "Marcus Webb",
@@ -63,7 +63,7 @@ const REVIEWS = [
     rating: 4,
     quote: "Great value for a solo artist who can't afford a full production team. The revision process was smooth and easy.",
     result: "Music video used across 3 platforms",
-    avatar: "avatar-marcus-webb.jpg",
+    avatar: "avatar-marcus-webb.png",
   },
   {
     name: "Sofia Reyes",
@@ -71,7 +71,7 @@ const REVIEWS = [
     rating: 5,
     quote: "Premium quality without the premium agency price tag. Our brand video became our top-performing ad creative.",
     result: "Lowered cost-per-view by 58%",
-    avatar: "avatar-sofia-reyes.jpg",
+    avatar: "avatar-sofia-reyes.png",
   },
   {
     name: "Hana Whitfield",
@@ -79,7 +79,7 @@ const REVIEWS = [
     rating: 5,
     quote: "Our product video felt like it was shot in a real studio with real models. Customers keep asking where we filmed it.",
     result: "Product page conversion up 2.4x",
-    avatar: "avatar-hana-whitfield.jpg",
+    avatar: "avatar-hana-whitfield.png",
   },
   {
     name: "Julian Marsh",
@@ -87,7 +87,7 @@ const REVIEWS = [
     rating: 5,
     quote: "We send a brief on Monday and have a finished video by Thursday. That speed alone changed how often we can launch new ads.",
     result: "4 new ad creatives shipped per month",
-    avatar: "avatar-julian-marsh.jpg",
+    avatar: "avatar-julian-marsh.png",
   },
   {
     name: "Renee Castillo",
@@ -95,7 +95,7 @@ const REVIEWS = [
     rating: 5,
     quote: "I run my page solo and could never afford a videographer. Now every post looks like it has a full production team behind it.",
     result: "Follower growth tripled in 90 days",
-    avatar: "avatar-renee-castillo.jpg",
+    avatar: "avatar-renee-castillo.png",
   },
   {
     name: "Tobias Lindgren",
@@ -103,7 +103,7 @@ const REVIEWS = [
     rating: 4,
     quote: "Every revision request was handled quickly and without pushback. It's the easiest vendor relationship we have.",
     result: "Return rate dropped after clearer demo videos",
-    avatar: "avatar-tobias-lindgren.jpg",
+    avatar: "avatar-tobias-lindgren.png",
   },
 ];
 
