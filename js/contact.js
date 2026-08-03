@@ -2,14 +2,15 @@
  * No backend involved in sending messages. On a valid submit, the button
  * morphs from "Send Message" into "Send via Email" and opens a prefilled
  * mailto: link so the visitor sends it from their own email app. Fill in
- * your real email below.
+ * your real email below. Country and phone-code lists come from
+ * js/countries.js, loaded before this file.
  *
  * WhatsApp sending was removed for now (no number set up yet). To bring it
  * back: add a WHATSAPP_NUMBER constant and open
  * `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(bodyText)}`
  * the same way the mailto link is opened in openMailClient() below.
  */
-const OWNER_EMAIL = "quillmotion@gmail.com";
+const OWNER_EMAIL = "quiillmotion@gmail.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submitBtn");
   const submitBtnContent = document.getElementById("submitBtnContent");
   let isReady = false;
+
+  populateCountryFields(form);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -39,13 +42,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function populateCountryFields(form) {
+  const countrySelect = form.country;
+  const phoneCodeSelect = form.phoneCode;
+
+  COUNTRIES.forEach((country) => {
+    const countryOption = document.createElement("option");
+    countryOption.value = country.name;
+    countryOption.textContent = country.name;
+    countrySelect.appendChild(countryOption);
+
+    const codeOption = document.createElement("option");
+    codeOption.value = country.code;
+    codeOption.textContent = `${country.code} ${country.name}`;
+    phoneCodeSelect.appendChild(codeOption);
+  });
+
+  // Picking a country auto-selects the matching calling code, since asking
+  // for both separately is redundant work for the visitor.
+  countrySelect.addEventListener("change", () => {
+    const match = COUNTRIES.find((c) => c.name === countrySelect.value);
+    if (match) phoneCodeSelect.value = match.code;
+  });
+}
+
 function readFields(form) {
   return {
     name: form.name.value.trim(),
     email: form.email.value.trim(),
     projectType: form.projectType.value,
-    country: form.country.value.trim(),
+    country: form.country.value,
     referrer: form.referrer.value,
+    phoneCode: form.phoneCode.value,
     phone: form.phone.value.trim(),
     message: form.message.value.trim(),
   };
@@ -53,10 +81,14 @@ function readFields(form) {
 
 function buildMailtoLink(form) {
   const fields = readFields(form);
-  const lines = [`New inquiry from ${fields.name}`, `Email: ${fields.email}`, `Service: ${fields.projectType}`];
+  const lines = [
+    `New inquiry from ${fields.name}`,
+    `Email: ${fields.email}`,
+    `Service: ${fields.projectType}`,
+    `Country: ${fields.country}`,
+  ];
 
-  if (fields.country) lines.push(`Country: ${fields.country}`);
-  if (fields.phone) lines.push(`Phone / WhatsApp: ${fields.phone}`);
+  if (fields.phone) lines.push(`Phone / WhatsApp: ${fields.phoneCode ? fields.phoneCode + " " : ""}${fields.phone}`);
   if (fields.referrer) lines.push(`Found us via: ${fields.referrer}`);
   lines.push("", fields.message);
 
@@ -97,6 +129,10 @@ function validate(form, fields) {
   const hasService = Boolean(fields.projectType);
   toggleError(form.projectType.closest(".form-group"), !hasService);
   if (!hasService) isValid = false;
+
+  const hasCountry = Boolean(fields.country);
+  toggleError(form.country.closest(".form-group"), !hasCountry);
+  if (!hasCountry) isValid = false;
 
   const hasMessage = fields.message.length > 5;
   toggleError(form.message.closest(".form-group"), !hasMessage);

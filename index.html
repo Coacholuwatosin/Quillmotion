@@ -45,7 +45,7 @@
   "name": "QuillMotion",
   "description": "AI video creation studio producing premium video content for brands, products, and individual creators.",
   "url": "https://quillmotion.com/",
-  "email": "quillmotion@gmail.com",
+  "email": "quiillmotion@gmail.com",
   "areaServed": "Worldwide"
 }
 </script>
@@ -465,89 +465,132 @@
           <span class="contact-point-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
           </span>
-          <span id="contactEmailDisplay">quillmotion@gmail.com</span>
+          <span id="contactEmailDisplay">quiillmotion@gmail.com</span>
         </div>
       </div>
 
       <div class="card contact-form-card" data-aos="fade-up" data-aos-delay="100">
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" required />
-              <div class="form-error">Please enter your name.</div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" required placeholder="you@example.com" />
-              <div class="form-error">Please enter a valid email address.</div>
-            </div>
+        <div class="contact-form-header">
+          <div class="contact-form-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
           </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="projectType">Service interested in</label>
-              <select id="projectType" name="projectType" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="Brand video">Brand video</option>
-                <option value="Product video">Product video</option>
-                <option value="Individual / creator video">Individual / creator video</option>
-                <option value="UGC ads">UGC ads</option>
-                <option value="Talking head video">Talking head video</option>
-                <option value="Product unboxing">Product unboxing</option>
-                <option value="Cashcow compilation">Cashcow compilation</option>
-                <option value="Other">Other</option>
-              </select>
-              <div class="form-error">Please select a service.</div>
-            </div>
-            <div class="form-group">
-              <label for="country">Country <span class="form-optional">(optional)</span></label>
-              <input type="text" id="country" name="country" placeholder="e.g. United States" />
-            </div>
+          <h3>Let's Talk About Your Project</h3>
+          <p>Fill in a few details. We respond within hours, no commitment required.</p>
+          <div class="contact-form-badges">
+            <span class="badge">★ 4.9 avg. rating</span>
+            <span class="badge">Replies within hours</span>
           </div>
+        </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="referrer">How did you find us? <span class="form-optional">(optional)</span></label>
-              <select id="referrer" name="referrer">
-                <option value="" selected>Select an option</option>
-                <option value="Staff / Friend / Referral">Staff / Friend / Referral</option>
-                <option value="Google Search">Google Search</option>
-                <option value="Social Media Platform">Social Media Platform</option>
-                <option value="Blog or Article">Blog or Article</option>
-                <option value="Email or Newsletter">Email or Newsletter</option>
-                <option value="Other">Other</option>
-              </select>
+        <div class="contact-form-body">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <div class="input-icon-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input type="text" id="name" name="name" required placeholder="Your full name" />
+                </div>
+                <div class="form-error">Please enter your name.</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <div class="input-icon-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
+                  <input type="email" id="email" name="email" required placeholder="you@example.com" />
+                </div>
+                <div class="form-error">Please enter a valid email address.</div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="phone">Phone / WhatsApp <span class="form-optional">(optional)</span></label>
-              <input type="text" id="phone" name="phone" placeholder="Your phone / WhatsApp number" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectType">Service interested in</label>
+                <div class="input-icon-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  <select id="projectType" name="projectType" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Brand video">Brand video</option>
+                    <option value="Product video">Product video</option>
+                    <option value="Individual / creator video">Individual / creator video</option>
+                    <option value="UGC ads">UGC ads</option>
+                    <option value="Talking head video">Talking head video</option>
+                    <option value="Product unboxing">Product unboxing</option>
+                    <option value="Cashcow compilation">Cashcow compilation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-error">Please select a service.</div>
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <div class="input-icon-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                  </select>
+                </div>
+                <div class="form-error">Please select your country.</div>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message" required placeholder="Describe what you need help with and the results you're aiming for..."></textarea>
-            <div class="form-error">Please add a few details about your project.</div>
-          </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="referrer">How did you find us? <span class="form-optional">(optional)</span></label>
+                <div class="input-icon-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                  <select id="referrer" name="referrer">
+                    <option value="" selected>Select an option</option>
+                    <option value="Staff / Friend / Referral">Staff / Friend / Referral</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Social Media Platform">Social Media Platform</option>
+                    <option value="Blog or Article">Blog or Article</option>
+                    <option value="Email or Newsletter">Email or Newsletter</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp <span class="form-optional">(optional)</span></label>
+                <div class="phone-input-group">
+                  <select id="phoneCode" name="phoneCode" aria-label="Country calling code">
+                    <option value="">Code</option>
+                  </select>
+                  <div class="input-icon-wrap">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number" />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-            <span class="btn-content" id="submitBtnContent">
-              Send Message
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </button>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <div class="input-icon-wrap input-icon-wrap-textarea">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                <textarea id="message" name="message" required placeholder="Describe what you need help with and the results you're aiming for..."></textarea>
+              </div>
+              <div class="form-error">Please add a few details about your project.</div>
+            </div>
 
-          <div class="contact-success" id="contactSuccess">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>
-            Opening your email app, just hit send there to complete your inquiry.
-          </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span class="btn-content" id="submitBtnContent">
+                Send Message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </button>
 
-          <p class="contact-privacy-note">
-            This form doesn't store anything on our servers. Your message is sent directly
-            from your own email app when you choose "Send".
-          </p>
-        </form>
+            <div class="contact-success" id="contactSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>
+              Opening your email app, just hit send there to complete your inquiry.
+            </div>
+
+            <p class="contact-privacy-note">
+              This form doesn't store anything on our servers. Your message is sent directly
+              from your own email app when you choose "Send".
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -602,7 +645,7 @@
 
     <div class="footer-col">
       <div class="footer-col-title">Get in touch</div>
-      <a href="mailto:quillmotion@gmail.com">quillmotion@gmail.com</a>
+      <a href="mailto:quiillmotion@gmail.com">quiillmotion@gmail.com</a>
       <a href="#contact" class="btn btn-primary footer-cta">Start a Project</a>
     </div>
   </div>
@@ -619,6 +662,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 <script src="js/api.js"></script>
+<script src="js/countries.js"></script>
 <script src="js/contact.js"></script>
 </body>
 </html>

@@ -460,6 +460,49 @@
   min-height: 120px;
 }
 
+.input-icon-wrap {
+  position: relative;
+}
+
+.input-icon-wrap .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-faint);
+  pointer-events: none;
+}
+
+.input-icon-wrap input,
+.input-icon-wrap select,
+.input-icon-wrap textarea {
+  padding-left: 2.6rem;
+}
+
+.input-icon-wrap-textarea .input-icon {
+  top: 1rem;
+  transform: none;
+}
+
+.phone-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-input-group select {
+  flex: 0 0 auto;
+  width: 84px;
+  padding-left: 0.75rem;
+  padding-right: 0.4rem;
+}
+
+.phone-input-group .input-icon-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
