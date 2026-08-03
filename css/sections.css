@@ -268,39 +268,25 @@
 }
 
 .leader-avatar {
-  width: 72px;
-  height: 72px;
+  position: relative;
+  width: 96px;
+  height: 96px;
   margin-inline: auto;
   margin-bottom: var(--sp-3);
   border-radius: 50%;
+  overflow: hidden;
   background: var(--color-accent-gradient);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--fs-lg);
   box-shadow: 0 0 0 6px var(--color-accent-soft);
+}
+
+.leader-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .leader-name {
   font-size: var(--fs-md);
-  margin-bottom: 0.15rem;
-}
-
-.leader-role {
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--sp-2);
-}
-
-.leader-bio {
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
 }
 
 /* ===== Stats ===== */
