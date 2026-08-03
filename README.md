@@ -52,9 +52,15 @@ data or content.
 - **Pricing / FAQ / services / leadership copy**: edit directly in
   `index.html` (all copy is easy to find and swap).
 - **Video samples**: live in `assets/videos/`. `hero-loop.mp4` plays in the
-  hero section. To add a new portfolio clip, drop the file into that folder
-  and add a matching entry to the `PORTFOLIO` array in `api/_data.js`, no
-  HTML edit needed.
+  hero section. To add a new portfolio clip: drop the file into that folder,
+  add a matching entry to the `PORTFOLIO` array in `api/_data.js` (no HTML
+  edit needed), and generate a matching poster image at
+  `assets/images/poster-<same-filename-without-.mp4>.jpg`, e.g. for
+  `my-clip.mp4` create `poster-my-clip.jpg`
+  (`ffmpeg -ss 1 -i assets/videos/my-clip.mp4 -vframes 1 assets/images/poster-my-clip.jpg`).
+  Without it, some mobile browsers (notably iOS Safari) show a blank frame
+  until the video is actually played, since they won't render a frame from
+  `preload="metadata"` alone.
 - **Contact routing**: open `js/contact.js` and confirm `OWNER_EMAIL` matches
   your real address. It's currently set to a Gmail address as a stand-in
   until a custom domain email is ready. WhatsApp sending was removed until

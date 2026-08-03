@@ -158,8 +158,9 @@ function renderNextPortfolioBatch() {
     el.className = "portfolio-item";
     el.setAttribute("data-aos", "fade-up");
     el.setAttribute("data-aos-delay", String((i % 3) * 60));
+    const posterName = "poster-" + item.src.replace(/\.mp4$/i, ".jpg");
     el.innerHTML = `
-      <video muted loop playsinline preload="metadata">
+      <video muted loop playsinline preload="metadata" poster="assets/images/${encodeURIComponent(posterName)}">
         <source src="assets/videos/${encodeURIComponent(item.src)}" type="video/mp4" />
       </video>
       <div class="portfolio-overlay"></div>
