@@ -20,6 +20,25 @@
   transition: transform var(--transition-fast);
 }
 
+/* Morphs the submit button's own label from "Send Message" to
+   "Send via Email" in place, instead of revealing a second button. */
+.btn-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-content.is-morphing {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.btn.is-ready {
+  background: var(--color-text);
+  box-shadow: 0 16px 36px rgba(23, 22, 43, 0.25);
+}
+
 .btn-primary {
   background: var(--color-accent-gradient);
   color: #fff;
@@ -66,16 +85,6 @@
 
 .btn-block {
   width: 100%;
-}
-
-.btn-email {
-  background: var(--color-text);
-  color: #fff;
-}
-
-.btn-email:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(23, 22, 43, 0.25);
 }
 
 /* Navbar */
@@ -417,6 +426,12 @@
   font-weight: 600;
   margin-bottom: 0.4rem;
   color: var(--color-text-muted);
+}
+
+.form-optional {
+  font-weight: 400;
+  color: var(--color-text-faint);
+  text-transform: none;
 }
 
 .form-group input,

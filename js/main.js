@@ -1,3 +1,11 @@
+// URLs like /portfolio are served the same index.html (see vercel.json
+// rewrites) so they still work as real, shareable links; this scrolls to
+// the matching section once the page has loaded. Add more entries here to
+// support deep links to other sections the same way.
+const ROUTE_SECTIONS = {
+  "/portfolio": "portfolio",
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initAOS();
   initNavbar();
@@ -5,8 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initAccordion();
   initBlobParallax();
+  initDeepLinkRoutes();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
+
+function initDeepLinkRoutes() {
+  const sectionId = ROUTE_SECTIONS[window.location.pathname];
+  if (!sectionId) return;
+  const target = document.getElementById(sectionId);
+  if (target) target.scrollIntoView({ block: "start" });
+}
 
 function initAOS() {
   if (window.AOS) {

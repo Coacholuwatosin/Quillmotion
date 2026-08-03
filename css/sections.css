@@ -609,17 +609,6 @@
   padding: var(--sp-4);
 }
 
-.contact-send-options {
-  display: none;
-  gap: var(--sp-2);
-  margin-top: var(--sp-3);
-}
-
-.contact-send-options.is-visible {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .contact-success {
   display: none;
   align-items: center;

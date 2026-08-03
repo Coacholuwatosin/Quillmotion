@@ -269,8 +269,8 @@
   <section class="section" id="leadership" style="background: var(--color-surface-alt);">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <div class="eyebrow">Leadership</div>
-        <h2 class="section-title">The people behind QuillMotion</h2>
+        <div class="eyebrow">Brand Leadership</div>
+        <h2 class="section-title">Meet The Team</h2>
         <p class="section-subtitle">A small, focused team obsessed with making your video the best thing you publish this month.</p>
       </div>
 
@@ -344,7 +344,7 @@
             <div class="pricing-highlight">1 Video</div>
             <ul class="pricing-features">
               <li>Up to 30 seconds</li>
-              <li>1 revision round</li>
+              <li>1 Revision Allowed</li>
               <li>Delivered in 3 to 4 days</li>
               <li>Vertical + square export</li>
             </ul>
@@ -360,7 +360,7 @@
             <div class="pricing-highlight">3 Videos</div>
             <ul class="pricing-features">
               <li>Up to 60 seconds each</li>
-              <li>3 revision rounds</li>
+              <li>3 Revisions Allowed</li>
               <li>Delivered in 5 to 7 days</li>
               <li>All aspect ratios + captions</li>
               <li>Priority support</li>
@@ -473,48 +473,74 @@
         <form id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Your name</label>
+              <label for="name">Full name</label>
               <input type="text" id="name" name="name" required />
               <div class="form-error">Please enter your name.</div>
             </div>
             <div class="form-group">
-              <label for="contactMethod">Email or phone</label>
-              <input type="text" id="contactMethod" name="contactMethod" required />
-              <div class="form-error">Please enter an email or phone number.</div>
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+              <div class="form-error">Please enter a valid email address.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectType">Service interested in</label>
+              <select id="projectType" name="projectType" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Brand video">Brand video</option>
+                <option value="Product video">Product video</option>
+                <option value="Individual / creator video">Individual / creator video</option>
+                <option value="UGC ads">UGC ads</option>
+                <option value="Talking head video">Talking head video</option>
+                <option value="Product unboxing">Product unboxing</option>
+                <option value="Cashcow compilation">Cashcow compilation</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="form-error">Please select a service.</div>
+            </div>
+            <div class="form-group">
+              <label for="country">Country <span class="form-optional">(optional)</span></label>
+              <input type="text" id="country" name="country" placeholder="e.g. United States" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="referrer">How did you find us? <span class="form-optional">(optional)</span></label>
+              <select id="referrer" name="referrer">
+                <option value="" selected>Select an option</option>
+                <option value="Staff / Friend / Referral">Staff / Friend / Referral</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Social Media Platform">Social Media Platform</option>
+                <option value="Blog or Article">Blog or Article</option>
+                <option value="Email or Newsletter">Email or Newsletter</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp <span class="form-optional">(optional)</span></label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone / WhatsApp number" />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="projectType">Project type</label>
-            <select id="projectType" name="projectType">
-              <option value="Brand video">Brand video</option>
-              <option value="Product video">Product video</option>
-              <option value="Individual / creator video">Individual / creator video</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your project, timeline, and goals..."></textarea>
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" required placeholder="Describe what you need help with and the results you're aiming for..."></textarea>
             <div class="form-error">Please add a few details about your project.</div>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">
-            Continue
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-content" id="submitBtnContent">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
           </button>
-
-          <div class="contact-send-options" id="sendOptions">
-            <a href="#" class="btn btn-email" id="sendEmailBtn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
-              Send via Email
-            </a>
-          </div>
 
           <div class="contact-success" id="contactSuccess">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>
-            Opening your app, just hit send there to complete your inquiry.
+            Opening your email app, just hit send there to complete your inquiry.
           </div>
 
           <p class="contact-privacy-note">
